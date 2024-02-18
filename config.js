@@ -72,7 +72,7 @@ var klaroConfig = {
     acceptAll: true,
 
     // replace "decline" with cookie manager modal
-    hideDeclineAll: false,
+    hideDeclineAll: true,
 
     // hide "learnMore" link
     hideLearnMore: false,
@@ -204,15 +204,25 @@ var klaroConfig = {
     // This is a list of third-party services that Klaro will manage for you.
     services: [
         {
-            name: 'twitter',
+            name: 'Google Analytics',
             default: false,
             contextualConsentOnly: true,
+            purposes: ['analytics'],
+        },
+        {
+            name: 'Google Tag Manager',
+            default: true,
+            purposes: ['analytics'],
+        },
+        {
+            name: 'Cleverreach',
+            default: true,
             purposes: ['marketing'],
         },
         {
-            name: 'youtube',
+            name: 'Microsoft Clarity',
             default: true,
-            purposes: ['marketing'],
+            purposes: ['analytics'],
         },
         {
             // Each service should have a unique (and short) name.
